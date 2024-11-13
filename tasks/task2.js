@@ -6,30 +6,20 @@ const students = [
   { name: "Jack", age: 23, score: 95 },
 ];
 
-// Ваше завдання: реалізувати наступні функції
+// 1. Отримати студентів з оцінкою більше 80
+console.log(getTopScoringStudents(students));
+// ["John", "Jane", "Jack"]
 
-// 1. getTopScoringStudents
-// Приймає масив студентів та повертає масив імен студентів, які мають оцінку більше 80
-function getTopScoringStudents(students) {
-  // Ваш код тут
-}
+// 2. Отримати середній вік студентів
+console.log(getAverageAge(students));
+// 21
 
-// 2. getAverageAge
-// Приймає масив студентів та повертає середній вік студентів
-function getAverageAge(students) {
-  // Ваш код тут
-}
+// 3. Додати нового студента
+addStudent(students, { name: "Tom", age: 24, score: 88 });
+console.log(students);
+// Масив студентів тепер містить студента Tom
 
-// 3. addStudent
-// Приймає масив студентів та новий об'єкт студента і додає його до масиву
-function addStudent(students, student) {
-  // Ваш код тут
-}
-
-// 4. removeStudentByName
-// Приймає масив студентів та ім'я студента, якого потрібно видалити, і повертає новий масив без цього студента
-function removeStudentByName(students, name) {
-  // Ваш код тут
-}
-
-module.exports = { getTopScoringStudents, getAverageAge, addStudent, removeStudentByName };
+// 4. Видалити студента за іменем
+removeStudentByName(students, "Jim");
+console.log(students);
+// Студент Jim буде видалений з масиву
